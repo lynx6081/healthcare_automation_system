@@ -166,11 +166,11 @@ class HealthCrewManager:
         """Get delegation information for frontend"""
         delegation_map = {
             'medical': {
-                'agent': 'Dr Warren',
+                'agent': 'drwarren',
                 'reason': 'medical expertise and health analysis'
             },
             'nutrition': {
-                'agent': 'Dr Carla',
+                'agent': 'Carla',
                 'reason': 'nutrition planning and dietary guidance'
             },
             'exercise': {
@@ -178,7 +178,7 @@ class HealthCrewManager:
                 'reason': 'exercise programming and physiotherapy expertise'
             },
             'performance': {
-                'agent': 'Dr Advik',
+                'agent': 'Advik',
                 'reason': 'performance data analysis and wearable insights'
             },
             'customer_success': {

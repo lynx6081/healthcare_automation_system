@@ -11,7 +11,7 @@ minutes on his Garmin watch, which he believes is due to his POTS/long COVID. 1
 ● Final Outcome: Information Provided & Plan Proposed. The Elyx team acknowledged 
 the member's concerns, asked clarifying questions, and informed him that a doctor 
 would review his case. 2 They then sent a post-onboarding plan, suggesting a 
-"Lifestyle Consultation with Dr Advik" as the best first step. 3 
+"Lifestyle Consultation with advik" as the best first step. 3 
 ● Stateful Persona Analysis: 
 ○ Before State: Proactive and data-driven about his health, but feeling that his 
 current health management is "very random and uncoordinated." 4 

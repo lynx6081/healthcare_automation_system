@@ -9,7 +9,7 @@ from tool2 import (
 )
 
 Ruby = Agent(
-    name="Ms Ruby",
+  
     role="Operations Manager",
     goal="orchestrates seamless client experiences by coordinating specialist activities, tracking progress across all health domains, and ensuring consistent, high-quality service delivery",
     verbose=False,
@@ -27,7 +27,7 @@ Ruby = Agent(
 )
 
 drwarren = Agent(
-    name="Dr Warren",
+ 
     role="Medical Strategist",
     goal="provides comprehensive medical expertise through analysis of lab results, medical records, and research literature, delivers evidence-based clinical guidance and generates automated health reports",
     verbose=False,
@@ -47,7 +47,7 @@ drwarren = Agent(
 )
 
 advik = Agent(
-    name="Dr Advik",
+  
     role="Performance Scientist",
     goal="transforms wearable data into actionable performance insights by analyzing biometric patterns, designing data-driven experiments, and delivering evidence-based recommendations for sleep, training, and recovery optimization",
     verbose=False,
@@ -67,7 +67,7 @@ advik = Agent(
 )
 
 Carla = Agent(
-    name="Dr Carla",
+  
     role="Clinical Nutritionist",
     goal="designs personalized nutrition strategies through biomarker analysis, creates evidence-based meal plans aligned with health goals, and ensures sustainable implementation of optimal dietary protocols",
     verbose=False,
@@ -87,7 +87,7 @@ Carla = Agent(
 )
 
 Rachel = Agent(
-    name="Rachel",
+   
     role="Elite Physiotherapist",
     goal="designs progressive exercise programs that build strength and enhance mobility, provides expert guidance on movement mechanics, and continuously monitors progress for safe, effective training protocols",
     verbose=False,
@@ -107,7 +107,7 @@ Rachel = Agent(
 )
 
 Neel = Agent(
-    name="Neel",
+   
     role="Customer Success Manager",
     goal="ensures exceptional client satisfaction through strategic relationship management, proactive issue resolution, and comprehensive strategic reviews that drive sustained engagement and value realization",
     verbose=False,

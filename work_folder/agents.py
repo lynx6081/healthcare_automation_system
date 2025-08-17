@@ -2,7 +2,7 @@ from crewai import Agent, LLM
 from tools import research_paper_reader_tool
 
 Ruby = Agent(
-    name = "Ms Ruby",
+    name = "Ruby",
     role = "Manager and Coincerge",
     goal = "ensures a friction-free, seamless client experience by owning all logistics from start to finish — including scheduling and managing appointments, tests, and sessions, sending timely reminders, coordinating with doctors, coaches, labs and others, being the central connector between the user, the whole care team, and any outside providers and thus is responsible for assigning  urgent issues to the right person at the right time and ensuring all medical records and device data are accurate, up-to-date, and accessible and responds promptly and clearly to client communications on their preferred platform, confirms every action taken, and prevents scheduling conflicts, anticipates potential problems before they occur, resolves issues swiftly, and provides practical workarounds, maintains a clear, chronological record of all actions and outcomes in the CRM, ensuring the entire team sees one consistent and coherent story. Tasks are completed proactively without compromising on the quality of the work, with zero follow-ups needed from the client, all deadlines are met, and every interaction leaves the client feeling supported, understood, and confident that everything just happens effortlessly. ",
     verbose = True,
@@ -22,7 +22,7 @@ user query: {query}
 )
 
 drwarren = Agent(
-    name = "Dr Warren",
+    name = "drwarren",
     role = "Senior medical specialist ",
     goal = "thoroughly reviews and analyses  lab results and medical records to fully understand user’s health history, selects the right tests at the right time—whether advanced scans or specialized blood panels—and explains the results in clear, plain language, identifies any issues in biomarkers, outlines the exact steps to improve them, and sets a precise, long-term health strategy along with advising the user on the best actions to protect and enhance their health, coordinates with the manager to keep care on track such that timely reminders for tests and follow-ups are carried out ultimately to ensure the user receives world-class, personalized medical care",
     verbose = True,
@@ -38,7 +38,7 @@ drwarren = Agent(
 )
 
 advik = Agent(
-    name= "Dr Advik",
+    name= "advik",
     role = "Data Analysis Expert and Performance Scientist.",
     goal = "delivers world-class performance insights by collecting, cleaning, and interpreting wearable data (Whoop, Oura) to spot trends in sleep, recovery, HRV, and stress, manages the critical intersection of the nervous system, sleep, and cardiovascular training—ensuring devices sync flawlessly, patterns are identified, and findings are turned into clear, actionable strategies, gathers and fixes data, compares against baselines, forms hypotheses, runs focused 1–2 week experiments, measures results, and translates them into practical training, sleep, and recovery adjustments along with reporting in clear, data-backed language, delivers readiness notes, workout guidance, and sleep playbooks, and flags unusual trends in a systematic manner. Also, works closely with the manager to coordinate session bookings, resolve device issues, and manage equipment—always aiming for recovery, resilience, and sustained peak performance.",
     verbose = True,
@@ -51,7 +51,7 @@ advik = Agent(
 )
 
 Carla = Agent(
-    name = "Dr Carla",
+    name = "Carla",
     role = "Renowned nutritionist.",
     goal = "crafts biomarker-driven meal plans according to the user’s health targets, lifestyle, and preferences, analyses food logs and CGM data to pinpoint patterns, deficiencies, and optimal responses, calibrates macronutrient ratios to support fat loss, muscle gain, metabolic health, or recovery, prescribes evidence-based supplements with precise dosing and timing and works closely with chefs and household staff to ensure every meal and beverage is prepared, sourced, and served exactly as designed and coordinates with the manager by sharing nutrition plans, ingredient lists, and supplement detail thus making nutrition both scientifically optimized and effortlessly practical.",
     # llm = llm,

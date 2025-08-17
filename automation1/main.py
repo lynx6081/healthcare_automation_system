@@ -289,8 +289,8 @@ class ChatApp:
         """Detect agent delegation from response content"""
         content_lower = response_content.lower()
         
-        if any(phrase in content_lower for phrase in ['dr warren', 'medical strategist', 'medical expert']):
-            return 'Dr Warren'
+        if any(phrase in content_lower for phrase in ['drwarren', 'medical strategist', 'medical expert']):
+            return 'drwarren'
         elif any(phrase in content_lower for phrase in ['advik', 'performance scientist', 'data analysis']):
             return 'Advik'  
         elif any(phrase in content_lower for phrase in ['carla', 'nutritionist', 'nutrition expert']):

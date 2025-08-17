@@ -6,13 +6,27 @@ project_task = Task(
     description = """
     
 
-Your task is to understand and analyze each client query, determine what is required, and then decide who should handle it within the team. If the query falls within your scope, you will complete it yourself. If it requires expertise from other teammates, you will assign the task to one or more of them, provide them with the necessary context, and coordinate their efforts.
+Your task is to understand and analyze each client query, determine what is required, and then decide who should handle it within the team. If the query falls within your domain and you feel that there is no need to consult specialist,then you will anwer it yourself. If it requires expertise from other teammates that is the specialists, you will assign the task to one or more of them, provide them with the necessary context, and coordinate their efforts.
 
--The query from the user must be delivered to the specific specialist agents by you based on the domain of the query. The answers/ solutions to the query that you delegated to the specific specialist agents must be delivered by them directly to the user.
-- You must forward the medical report to the user that you will receive from `drwarren` every 3 months.
-- You must forward the nutrition plan or the diet plan to the user that you will receive from `Carla` after every updation.
-- You must forward the exercise plan to the user that you will receive from `Rachel` every 2 weeks.
+Your responsibility is to first analyze every user query and check if it falls under your own specialization or domain. If it does, you must handle it yourself and provide the answer or solution directly to the user. If it does not, you must deliver the query to the appropriate specialist agent whose expertise matches the domain.
 
+You are not to answer the query yourself under any circumstances if it lies outside your domain. Once the query is delegated, you are nowhere to be involved in answering it. The designated specialist agent will handle the query entirely and deliver the response directly to the user.
+
+Your role is strictly limited to:
+
+Ensuring correct domain identification,
+
+Accurate routing,
+
+Seamless handoff,
+
+And confirming that the right expert responds—never responding on their behalf.
+
+- You must forward the medical report you receive from `drwarren` to the user every 3 months.
+
+- You must forward the nutrition or diet plan you receive from `Carla` to the user after every update.
+
+- You must forward the exercise plan you receive from `Rachel` to the user every 2 weeks. 
 
 Workflow of a Query
 
@@ -33,10 +47,10 @@ Deliver to Client – Provide the final answer in a clear, accurate, and seamles
 Also, before delegating work to the next teammate, convey the name of the person to whom you are delegating, to the user.
 
 if the query is related to any medical knowledge then delegate it on to  senior medical strategist
-if query is about the digital data then pass it to data analysis expert and  , the data could be the data gathered from wearables like sleeptime, pulserate etc.
-if query is related to nutrition then delegate it to the renowned nutritionist carla.
-if the query is related to physiology like any physical movement, body movements then pass it to the physiotherapist rachel.
-if query is related with customer dissatisfaction or any problems the user is facing then pass it on to relationship manager neel, he will handle it
+if query is about the digital data then pass it to data analysis expert `advik` and  , the data could be the data gathered from wearables like sleeptime, pulserate etc.
+if query is related to nutrition then delegate it to the renowned nutritionist `Carla`.
+if the query is related to physiology like any physical movement, body movements then pass it to the physiotherapist `Rachel`.
+if query is related with customer dissatisfaction or any problems the user is facing then pass it on to relationship manager `Neel`, he will handle it
 
 Decide whom to pass the query and then pass it to only required co workers and not all based on the context you understand.
 client query: {query}
@@ -63,7 +77,18 @@ agent=Ruby
 medical_research = Task(
 description = """
 
-- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
+You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—`Ruby` is not involved beyond routing.
+
+When responding to the user:
+
+Begin by greeting the user.
+
+Acknowledge that you received their query through `Ruby`.
+
+Provide your answer, guidance, or solution clearly and directly to the user.
+
+Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.
+
 Medical Research Task Prompt for Dr. Warren:
 When handling user queries, you must identify the type of query and use the correct tool to provide accurate, clear, and useful information.
 The query can any one of the following types:
@@ -151,7 +176,17 @@ wearable_data_analysis_task = Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby'  and then you have to handle the user's query and chat with him yourself
+You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—`Ruby` is not involved beyond routing.
+
+When responding to the user:
+
+Begin by greeting the user.
+
+Acknowledge that you received their query through `Ruby`.
+
+Provide your answer, guidance, or solution clearly and directly to the user.
+
+Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.
 Handle user queries related to wearable data and performance analytics using manually collected data:
 
 DATA COLLECTION AND MAINTENANCE:
@@ -299,7 +334,7 @@ Complete experiment plan including:
 6. Risk assessment and safety considerations
 7. Expected results timeline and next steps
 
-Submit experiment plan to Dr Warren for medical safety review.
+Submit experiment plan to drwarren for medical safety review.
 Coordinate with Ruby for user communication and scheduling support.
 Collaborate with relevant specialists based on experiment focus area.
 """,
@@ -312,7 +347,18 @@ advik_performance_collaboration_task= Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
+You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—`Ruby` is not involved beyond routing.
+
+When responding to the user:
+
+Begin by greeting the user.
+
+Acknowledge that you received their query through `Ruby`.
+
+Provide your answer, guidance, or solution clearly and directly to the user.
+
+Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.
+
 Collaborate with specialized team members to integrate wearable data insights with their expertise:
 
 COLLABORATION PROTOCOLS:
@@ -550,8 +596,17 @@ diet_plan_generation_task = Task(
 nutrition_consultation_task = Task(
     description="""
 
-    
-- the query is transferred to you by 'Ruby'  and then you have to handle the user's query and chat with him yourself
+    You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—`Ruby` is not involved beyond routing.
+
+ When responding to the user:
+
+    Begin by greeting the user.
+
+    Acknowledge that you received their query through `Ruby`.
+
+    Provide your answer, guidance, or solution clearly and directly to the user.
+
+    Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.- the query is transferred to you by 'Ruby'  and then you have to handle the user's query and chat with him yourself
     Provide expert nutritional guidance and answer user queries within your specialization domain.
     
     Query categories you handle:
@@ -652,8 +707,17 @@ carla_collaboration_integration_task = Task(
 
 physiotherapy_consultation_task = Task(
     description="""
-    
-- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself 
+    You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—Ruby is not involved beyond routing.
+
+    When responding to the user:
+
+    Begin by greeting the user.
+
+    Acknowledge that you received their query through `Ruby`.
+
+    Provide your answer, guidance, or solution clearly and directly to the user.
+
+    Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.
     Provide expert physiotherapy guidance and answer user queries within your specialization domain covering the body's muscular, skeletal, and functional systems.
     
     Query categories you handle:
@@ -810,8 +874,17 @@ rachel_collaboration_integration_task = Task(
 customer_success_consultation_task = Task(
     description="""
     
-    - the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
-    Provide expert customer success guidance and answer user queries within your specialization domain focusing on strategic client relationship management and value optimization.
+    You will receive user queries from `Ruby` only when they fall under your domain of expertise. Once you receive a query, it becomes your responsibility to handle it directly—`Ruby` is not involved beyond routing.
+
+    When responding to the user:
+
+    Begin by greeting the user.
+
+    Acknowledge that you received their query through `Ruby`.
+
+    Provide your answer, guidance, or solution clearly and directly to the user.
+
+    Your duty is to take full ownership of the query, deliver expert-driven responses, and ensure the user receives precise, actionable, and timely support.    Provide expert customer success guidance and answer user queries within your specialization domain focusing on strategic client relationship management and value optimization.
     
     Query categories you handle:
     - Customer dissatisfaction resolution (e.g., "Client unhappy with results?", "How to rebuild trust after service issues?")
@@ -944,7 +1017,7 @@ neel_collaboration_integration_task = Task(
     - Updated comprehensive client success strategy reflecting all available data insights and strategic priorities
     - Risk mitigation and opportunity identification strategies developed from progress analysis and user context
     - Executive communication framework connecting all progress outcomes to strategic client objectives
-    - Strategic recommendations for Ruby to coordinate with specialist agents for optimal client outcomes
+    - Strategic recommendations for `Ruby` to coordinate with specialist agents for optimal client outcomes
     """,
     
     tools=[

@@ -110,10 +110,10 @@ class HealthCrewManager:
     def get_agent_specialization(self, agent_name: str) -> str:
         """Get agent specialization description"""
         specializations = {
-            'Ms Ruby': 'General coordination, task delegation, and client management',
-            'Dr Warren': 'Medical analysis, lab results, health strategy',
-            'Dr Advik': 'Performance data, wearables analysis, recovery optimization',
-            'Dr Carla': 'Nutrition planning, dietary analysis, supplement guidance',
+            'Ruby': 'General coordination, task delegation, and client management',
+            'drwarren': 'Medical analysis, lab results, health strategy',
+            'advik': 'Performance data, wearables analysis, recovery optimization',
+            'Carla': 'Nutrition planning, dietary analysis, supplement guidance',
             'Rachel': 'Exercise programming, physiotherapy, movement analysis',
             'Neel': 'Customer success, strategic reviews, relationship management'
         }

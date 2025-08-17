@@ -213,7 +213,7 @@ class AutomationManager:
     # Existing tasks...
     
     # Agent-specific automated tasks
-    # Dr Warren: 3-month report generation
+    # drwarren: 3-month report generation
         schedule.every(90).days.do(self.trigger_warren_quarterly_report)
         
         # Carla: Diet plan updates every 2 weeks  
@@ -386,7 +386,7 @@ class AutomationManager:
     # """Trigger Warren's quarterly medical report"""
         self.add_reminder(
             'Medical Report',
-            'Dr Warren is generating your quarterly health report',
+            'drwarren is generating your quarterly health report',
             datetime.now() + timedelta(minutes=30),
             urgent=False
         )
@@ -399,7 +399,7 @@ class AutomationManager:
             # """Trigger Carla's diet plan update"""
         self.add_reminder(
             'Nutrition Update',
-            'Dr Carla is updating your nutrition plan based on recent progress',
+            'Carla is updating your nutrition plan based on recent progress',
             datetime.now() + timedelta(minutes=15),
             urgent=False
     )
@@ -417,7 +417,7 @@ class AutomationManager:
         """Trigger Advik's weekly performance analysis"""
         self.add_reminder(
             'Performance Analysis',
-            'Dr Advik is analyzing your weekly performance data',
+            'advik is analyzing your weekly performance data',
             datetime.now() + timedelta(minutes=25),
             urgent=False
         )

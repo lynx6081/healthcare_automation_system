@@ -38,25 +38,25 @@ if 'task_results' not in st.session_state:
 AGENT_INFO = {
     "Ruby": {
         "emoji": "💼",
-        "title": "Ms Ruby - Manager & Concierge",
+        "title": "Ruby - Manager & Concierge",
         "description": "Logistics coordination, scheduling, and client experience management",
         "agent_obj": Ruby if AGENTS_LOADED else None
     },
-    "Dr Warren": {
+    "drwarren": {
         "emoji": "👨‍⚕️",
-        "title": "Dr Warren - Senior Medical Specialist",
+        "title": "drwarren - Senior Medical Specialist",
         "description": "Medical analysis, lab results, and health strategy",
         "agent_obj": drwarren if AGENTS_LOADED else None
     },
-    "Dr Advik": {
+    "advik": {
         "emoji": "📊",
-        "title": "Dr Advik - Performance Scientist",
+        "title": "advik - Performance Scientist",
         "description": "Wearable data analysis, sleep, recovery, and performance insights",
         "agent_obj": advik if AGENTS_LOADED else None
     },
-    "Dr Carla": {
+    "Carla": {
         "emoji": "🥗",
-        "title": "Dr Carla - Nutritionist",
+        "title": "Carla - Nutritionist",
         "description": "Biomarker-driven meal plans and nutrition optimization",
         "agent_obj": Carla if AGENTS_LOADED else None
     },

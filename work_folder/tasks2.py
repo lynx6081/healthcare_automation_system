@@ -268,7 +268,7 @@ Complete experiment plan including:
 6. Risk assessment and safety considerations
 7. Expected results timeline and next steps
 
-Submit experiment plan to Dr Warren for medical safety review.
+Submit experiment plan to drwarren for medical safety review.
 Coordinate with Ruby for user communication and scheduling support.
 Collaborate with relevant specialists based on experiment focus area.
 """,
