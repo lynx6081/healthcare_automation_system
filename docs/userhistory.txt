@@ -1,0 +1,191 @@
+Note that this is just a sample and it doesn’t include all the metrics that we would track. 
+This is just to help you think about what things you can think about while trying to design 
+the visualization. Expecting people to use LLM’s to come up with such summarisations and 
+since they can hallucinate you’ll notice the numbers in the text which are references to the 
+corresponding chat ensuring nothing is being made up.  
+Episode 1: Initial Health Inquiry & Onboarding (April 25-28) 
+● Primary Goal/Trigger: [MEMBER_NAME] expresses concern about his high intensity 
+minutes on his Garmin watch, which he believes is due to his POTS/long COVID. 1 
+● Triggered by Whom: Member 
+● Friction Points: None. 
+● Final Outcome: Information Provided & Plan Proposed. The Elyx team acknowledged 
+the member's concerns, asked clarifying questions, and informed him that a doctor 
+would review his case. 2 They then sent a post-onboarding plan, suggesting a 
+"Lifestyle Consultation with Dr Advik" as the best first step. 3 
+● Stateful Persona Analysis: 
+○ Before State: Proactive and data-driven about his health, but feeling that his 
+current health management is "very random and uncoordinated." 4 
+○ After State: Engaged with the Elyx service, has shared initial health data and 
+concerns, and is awaiting the proposed lifestyle consultation. 
+Metric 
+Response Time 
+Time to Resolution 
+Value 
+25 minutes (from initial message to first 
+response) 
+3 days (from initial message to proposed 
+plan) 
+Episode 2: Clarification, Data Gathering & Initial Workout Plan 
+(May 3-12) 
+● Primary Goal/Trigger: Follow-up on the high-intensity minutes and initiation of data 
+gathering and workout planning. 
+● Triggered by Whom: Member & Elyx Concierge 
+● Friction Points: 
+○ Communication: [MEMBER_NAME] has to ask who is messaging him from the 
+concierge number. 5 
+○ Data Access: Elyx needs to request access to past medical records from 
+cardiologists. 6 
+○ Workout Plan Accessibility: The member found the initial workout plan difficult 
+to access due to a password requirement. 7 
+● Final Outcome: Information Provided & Plan in Motion. Dr. Advik acknowledged the 
+high-intensity minutes and stated the medical team would investigate further. 8Elyx 
+has started the process of collecting medical records and has provided an initial hotel 
+gym workout plan. 9 
+● Stateful Persona Analysis: 
+○ Before State: Engaged with the Elyx service, has shared initial health data and 
+concerns, and is awaiting the proposed lifestyle consultation. 
+○ After State: Becoming more actively involved in the process, but also starting to 
+experience some friction with the service's execution (communication, 
+accessibility). 
+Metric 
+Response Time 
+Time to Resolution 
+Value 
+3 hours 2 minutes (from member’s 
+message about "3x 150 mins" to 
+concierge's clarifying question) 
+9 days (from the start of this episode to 
+the delivery of the workout plan) 
+Episode 3: Member Dissatisfaction & Service Feedback (May 
+13-14) 
+● Primary Goal/Trigger: [MEMBER_NAME] expresses significant dissatisfaction with 
+the perceived lack of progress and proactivity from Elyx. 
+● Triggered by Whom: Member 
+● Friction Points: 
+○ Perceived Inaction: The member feels that after a month, Elyx has not made any 
+tangible impact on his diet, supplements, sleep, or exercise patterns, and the 
+service feels "very very sluggish." 10 
+○ Lack of Proactivity: The member points out that Elyx should be able to track his 
+activity levels and know if he's been to the gym. 11 
+○ Communication Channel Confusion: A debate ensues about what constitutes 
+"founder comments" versus "customer comments" and whether to use WhatsApp 
+or Slack. 12 
+● Final Outcome: Acknowledgment & Promise to Improve. The Elyx team, primarily 
+Neel, acknowledges the member's feedback, explains that a lot of work is happening 
+in the background, and promises to consolidate everything to provide a clearer 
+picture of the plan and priorities. 13 
+● Stateful Persona Analysis: 
+○ Before State: Becoming more actively involved in the process, but also starting to 
+experience some friction with the service's execution (communication, 
+accessibility). 
+○ After State: Frustrated and questioning the value of the service. He is now taking 
+on a more directive role, providing feedback on how the service should operate. 
+Metric 
+Response Time 
+Time to Resolution 
+Value 
+1 day, 13 hours, 32 minutes (from the 
+member’s message about not being to the 
+gym to his more detailed feedback) 
+1 day, 1 hour, 28 minutes (from the 
+member’s detailed feedback to Neel's 
+commitment to provide a consolidated 
+plan) 
+Episode 4: Health Optimization Plan & Continued Feedback (May 
+15-24) 
+● Primary Goal/Trigger: Elyx provides a "Health Optimization Plan," and the member 
+continues to provide critical feedback on the service's execution and communication. 
+● Triggered by Whom: Elyx Concierge & Member 
+● Friction Points: 
+○ Plan Quality: The member feels the plan is not comprehensive, lacks 
+prioritization, and doesn't explain the "why" behind the recommendations. 14 
+○ Scheduling: A workout is scheduled without consulting the member's 
+preferences for time of day, leading to a missed session. 15 
+○ Lack of Context: The member complains that workout invitations lack context 
+about the goals and metrics for the exercise. 16 
+● Final Outcome: Ongoing Adjustments. Elyx acknowledges the feedback on the plan 
+and the scheduling mishap and commits to incorporating the member's preferences 
+in the future. They also attempt to clarify the goals for the member’s health plan. 
+● Stateful Persona Analysis: 
+○ Before State: Frustrated and questioning the value of the service. He is now 
+taking on a more directive role, providing feedback on how the service should 
+operate. 
+○ After State: Still feeling that the service is not meeting his expectations for 
+proactivity and personalization. He is becoming more granular in his feedback, 
+pointing out specific instances of poor execution. 
+Metric 
+Response Time 
+Time to Resolution 
+Value 
+27 minutes (from member’s feedback on 
+the plan to Elyx's response) 
+This episode is a series of ongoing 
+feedback and adjustments, so a single 
+"resolution" is not as clear-cut. 
+Episode 5: Medical Coordination & Device Management (May 21 - 
+June 6) 
+● Primary Goal/Trigger: A mix of medical coordination, including getting records from 
+past doctors, and managing the member’s wearable devices. 
+● Triggered by Whom: Elyx Concierge & Member 
+● Friction Points: 
+○ Medical Records: Difficulty in obtaining records from a cardiologist's clinic, 
+requiring the member to intervene directly. 17 
+○ Device Issues: The member expresses a desire to switch from an Oura ring to a 
+Whoop band due to battery life and tracking features. 18 
+○ Logistics: A new Whoop band is ordered, but there are concerns about it arriving 
+before the member travels. 19 
+● Final Outcome: Mixed. Elyx is actively working to get the necessary medical records 
+and has ordered a new Whoop band for the member. The member has also started 
+Mounjaro injections. 20 
+● Stateful Persona Analysis: 
+○ Before State: Still feeling that the service is not meeting his expectations for 
+proactivity and personalization. He is becoming more granular in his feedback, 
+pointing out specific instances of poor execution. 
+○ After State: The member is now more of a "co-manager" of his health journey, 
+actively involved in decisions about his medical care and the tools used to monitor 
+his health. 
+Metric 
+Response Time 
+Time to Resolution 
+Value 
+Varies depending on the specific 
+interaction within this longer episode. 
+Ongoing, as medical coordination and 
+device management are continuous 
+processes. 
+Episode 6: Disagreement on Medical Advice & AI Capabilities 
+(June 19-23) 
+● Primary Goal/Trigger: A significant disagreement arises between the advice of an 
+Elyx doctor and the member’s primary care physician regarding a new medication 
+(Cozaar). 21 This leads to a discussion about the capabilities of Elyx's AI. 
+● Triggered by Whom: Member 
+● Friction Points: 
+○ Conflicting Medical Opinions: The member’s primary doctor strongly disagrees 
+with the prescription of Cozaar, creating confusion and a need for clarification. 22 
+○ AI Limitations: The member requests an AI-generated report to justify the 
+prescription, but the Elyx team has to manage his expectations about the current 
+capabilities of their AI, explaining that it's still under development and not ready 
+for clinical advice. 23 
+○ Report Quality: The AI-generated reports lack citations and are not easily 
+understandable for the member. 24 
+● Final Outcome: Clarification and Feedback. The Elyx team provides the member with 
+the AI-generated reports while also explaining their limitations. They also provide links 
+to the research papers that the AI used. 25 This episode highlights a critical point of 
+friction when external medical advice conflicts with the service's recommendations. 
+● Stateful Persona Analysis: 
+○ Before State: The member is now more of a "co-manager" of his health journey, 
+actively involved in decisions about his medical care and the tools used to monitor 
+his health. 
+○ After State: The member is now more skeptical of the service's recommendations 
+and is pushing for more evidence-based justifications. He is also providing direct 
+feedback on the development of the company's technology. 
+Metric 
+Response Time 
+Value 
+9 hours, 20 minutes (from the member 
+forwarding the conflicting medical advice 
+to the Elyx team's response about AI 
+capabilities) 
+ 
+Time to Resolution 4 days (from the initial query to the 
+delivery of the AI reports and links)

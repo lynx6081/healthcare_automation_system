@@ -1,0 +1,58 @@
+{
+  "searchParameters": {
+    "q": "Beautiful destinations near me",
+    "type": "search",
+    "num": 5,
+    "engine": "google"
+  },
+  "organic": [
+    {
+      "title": "Top 19 Beautiful Places To Visit In Idaho - GlobalGrasshopper",
+      "link": "https://globalgrasshopper.com/destinations/north-america/top-15-of-the-most-beautiful-places-to-visit-in-idaho/",
+      "snippet": "Explore my 19 stunning places to visit in Idaho from Insta-worthy views and secret lake beaches to quirky small towns...",
+      "position": 1
+    },
+    {
+      "title": "20 Epic Day Trips from Seattle You Need to Take in 2025",
+      "link": "https://postcardstoseattle.com/day-trips-from-seattle/",
+      "snippet": "There are many places to stop on a North Cascades day trip from Seattle, such as Ladder Creek Falls, Gorge Overlook, and Washington Pass ...",
+      "position": 2
+    },
+    {
+      "title": "Best Things to Do Near Me - Tripadvisor",
+      "link": "https://www.tripadvisor.com/Attractions",
+      "snippet": "Must-dos in trending places \u00b7 Rome \u00b7 Oahu \u00b7 New York City \u00b7 Las Vegas \u00b7 Barcelona \u00b7 Tokyo \u00b7 Colosseum \u00b7 Bas\u00edlica de la Sagrada Familia.",
+      "position": 3
+    },
+    {
+      "title": "21 Beautiful Places to Travel in Minnesota in 2021 - Planet with Sara",
+      "link": "https://planetwithsara.com/21-beautiful-places-to-travel-in-minnesota-in-2021/",
+      "snippet": "From the headwaters of the Mississippi River, to the Bemidji Woolen Mill to the iconic Paul Bunyon and Babe statutes, there are many historical and fun things ...",
+      "position": 4
+    },
+    {
+      "title": "25 Must-Visit Scenic Outdoor Places in Connecticut",
+      "link": "https://earlybirdonthetrail.com/must-see-outdoor-places-connecticut/",
+      "snippet": "25 Must-Visit Most Beautiful Places in Connecticut! Scenic spots in CT that involve minimal or short walks: 1. Topsmead State Forest, Litchfield.",
+      "position": 5
+    }
+  ],
+  "relatedSearches": [
+    {
+      "query": "beautiful places to visit in wisconsin"
+    },
+    {
+      "query": "places to visit in new mexico with family"
+    },
+    {
+      "query": "best places to visit in new mexico in winter"
+    },
+    {
+      "query": "beautiful places in indiana"
+    },
+    {
+      "query": "most beautiful places in idaho to live"
+    }
+  ],
+  "credits": 1
+}

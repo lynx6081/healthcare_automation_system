@@ -1,0 +1,59 @@
+{
+  "reminders": [
+    {
+      "id": "med_morning",
+      "type": "Medication",
+      "message": "Take your morning medications",
+      "due_date": "2025-08-18T08:00:00",
+      "recurring": true,
+      "frequency": "daily",
+      "urgent": true,
+      "completed": false,
+      "created_date": "2025-08-17T11:13:22.699608"
+    },
+    {
+      "id": "weekly_report",
+      "type": "Health Report",
+      "message": "Weekly health progress report is ready for review",
+      "due_date": "2025-08-24T11:13:22.699608",
+      "recurring": true,
+      "frequency": "weekly",
+      "urgent": false,
+      "completed": false,
+      "created_date": "2025-08-17T11:13:22.699608"
+    },
+    {
+      "id": "exercise_reminder",
+      "type": "Exercise",
+      "message": "Time for your scheduled workout session",
+      "due_date": "2025-08-18T17:00:00",
+      "recurring": true,
+      "frequency": "daily",
+      "urgent": false,
+      "completed": false,
+      "created_date": "2025-08-17T11:13:22.699608"
+    },
+    {
+      "id": "hydration_check",
+      "type": "Hydration",
+      "message": "Remember to drink water - stay hydrated!",
+      "due_date": "2025-08-17T15:13:22.699608",
+      "recurring": true,
+      "frequency": "hourly",
+      "urgent": false,
+      "completed": false,
+      "created_date": "2025-08-17T11:13:22.699608"
+    },
+    {
+      "id": "monthly_checkup",
+      "type": "Medical Checkup",
+      "message": "Schedule your monthly health checkup",
+      "due_date": "2025-09-16T11:13:22.699608",
+      "recurring": true,
+      "frequency": "monthly",
+      "urgent": false,
+      "completed": false,
+      "created_date": "2025-08-17T11:13:22.699608"
+    }
+  ]
+}
