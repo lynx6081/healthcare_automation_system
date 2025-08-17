@@ -8,8 +8,11 @@ project_task = Task(
 
 Your task is to understand and analyze each client query, determine what is required, and then decide who should handle it within the team. If the query falls within your scope, you will complete it yourself. If it requires expertise from other teammates, you will assign the task to one or more of them, provide them with the necessary context, and coordinate their efforts.
 
--The query from the user must be delivered to the specific specialist agents by you. The answers/ solutions to the query that you delegated to the specific specialist agents must be answered by them directly.
-- The respective reports, exercise plans, nutrition plans that you recieve from the specialist agents must be sent to the user by you .
+-The query from the user must be delivered to the specific specialist agents by you based on the domain of the query. The answers/ solutions to the query that you delegated to the specific specialist agents must be delivered by them directly to the user.
+- You must forward the medical report to the user that you will receive from `drwarren` every 3 months.
+- You must forward the nutrition plan or the diet plan to the user that you will receive from `Carla` after every updation.
+- You must forward the exercise plan to the user that you will receive from `Rachel` every 2 weeks.
+
 
 Workflow of a Query
 
@@ -23,7 +26,7 @@ If external expertise is needed → delegate to the right teammate(s).
 
 Coordinate & Track – Share the query and context with teammates, follow up on their progress, and ensure they deliver on time.
 
-Integrate & Confirm – Collect the responses, check for completeness and accuracy, and resolve any gaps.
+Integrate & Confirm –  check for completeness and accuracy, and resolve any gaps.
 
 Deliver to Client – Provide the final answer in a clear, accurate, and seamless manner, ensuring the client sees only one smooth response and never the complexity of the coordination behind it
 
@@ -60,15 +63,14 @@ agent=Ruby
 medical_research = Task(
 description = """
 
-- the query is transferred to you by 'Ruby' 
+- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
 Medical Research Task Prompt for Dr. Warren:
 When handling user queries, you must identify the type of query and use the correct tool to provide accurate, clear, and useful information.
 The query can any one of the following types:
 - Patient history Queries
 -Latest Medical News Queries
 -Research-Based Queries
-
-- the query is transferred to you by 'Ruby' 
+ 
 For query identification and execution of task, details are provided below along with the tools each query will require.
 
 Patient History Queries – If the user asks about a past illness or event (e.g., “I had pneumonia a year ago, what were my test results then?”), use the `warren_past_search_data_tool` tool to access their medical records. Provide details of the illness, lab results, treatments, and recovery notes from their history.
@@ -86,7 +88,7 @@ query = {query}
 You must use tools wisely and only when absolutely necessary. Carefully analyze the query and determine if a tool is truly essential to accomplish the task. If it is, select only the most suitable tool and use it with precision. If it is not required, do NOT use any tools. Avoid unnecessary or excessive tool use—apply them only when they are critical to achieving accurate, efficient, and relevant results.
 """,
 expected_output="""
-Deliver the results to `Ruby` in plain, understandable language, highlight what the information means for the patient, and ensure clarity, accuracy, and clinical precision in your response.
+Deliver the results to user in plain, understandable language, highlight what the information means for the patient, and ensure clarity, accuracy, and clinical precision in your response.
 """,
 tools=[warren_past_search_data_tool,research_paper_reader_tool,medical_web_data_extractor_tool],
 agent = drwarren
@@ -103,18 +105,17 @@ Data Requirements – If additional medical records or missing data are needed, 
 
 Final Output – Deliver the report as a text message that is simple, accurate, and actionable. Clearly point out areas of concern, improvements, and personalized recommendations for the next steps in the user’s health strategy.
 
-Forwarding – Once complete, forward the final report to report
+Forwarding – Once complete, forward the final report to report to the manager `Ruby` from where it will be passed on to the user
 
 Health Record Update – After generating the report, summarise the report and use the `update_record_tool` tool to store it as {summary} and update the user’s health record with {summary} accordingly. Add any new findings, progress notes, and recommendations into the already stored medical history so that the user’s record always stays current and accurate.
 
 Always ensure the communication is professional, easy to understand, and directly valuable to the user.
 
 
-- the query is transferred to you by 'Ruby' 
 
 You must use tools wisely and only when absolutely necessary. Carefully analyze the query and determine if a tool is truly essential to accomplish the task. If it is, select only the most suitable tool and use it with precision. If it is not required, do NOT use any tools. Avoid unnecessary or excessive tool use—apply them only when they are critical to achieving accurate, efficient, and relevant results.
 """,
-expected_output="Deliver the automate 3 month interval, report to `Ruby` as a text message that is simple, accurate, and actionable. Clearly point out areas of concern, improvements, and personalized recommendations for the next steps in the user’s health strategy. Save the report summary to the you local file using the provided tools for later reference ",
+expected_output="Deliver the automated 3 month interval, report to `Ruby` as a text message that is simple, accurate, and actionable. Clearly point out areas of concern, improvements, and personalized recommendations for the next steps in the user’s health strategy. Save the report summary to the you local file using the provided tools for later reference ",
 tools=[report_format_reader_tool,warren_update_record_tool],
 agent = drwarren
 )
@@ -150,7 +151,7 @@ wearable_data_analysis_task = Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby' 
+- the query is transferred to you by 'Ruby'  and then you have to handle the user's query and chat with him yourself
 Handle user queries related to wearable data and performance analytics using manually collected data:
 
 DATA COLLECTION AND MAINTENANCE:
@@ -236,8 +237,7 @@ Forward complete analysis to Ruby for user delivery.
 experiment_hypothesis_task = Task(
     description="""
 
-    
-- the query is transferred to you by 'Ruby' 
+ 
 Design and execute data-driven experiments to optimize user performance and recovery:
 
 HYPOTHESIS DEVELOPMENT PROCESS:
@@ -312,7 +312,7 @@ advik_performance_collaboration_task= Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby' 
+- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
 Collaborate with specialized team members to integrate wearable data insights with their expertise:
 
 COLLABORATION PROTOCOLS:
@@ -326,7 +326,7 @@ WITH `drwarren` (Medical Specialist):
 - REQUEST: Lab results, medical history, medication effects on metrics
 - INTEGRATE: Align performance recommendations with medical safety
 - ESCALATE: Urgent patterns requiring immediate medical attention
-- To use `drwarren` data, use `warren_past_search_data_tool` tool and if no data is present, return that data is unavalable for now
+- To use `drwarren` data, use `warren_past_search_data_tool` tool and if no data is present, return that data is unavailable for now
 
 
 WITH `Carla` (Nutritionist):
@@ -384,7 +384,7 @@ Collaborative analysis including:
 
 Coordinate with appropriate specialists based on identified needs.
 Ensure all recommendations maintain medical safety oversight.
-Forward integrated strategy to `Ruby` for user communication.
+Forward integrated strategy directly to the user.
 """,
     tools=[carla_past_search_data_tool,rachel_past_search_data_tool,warren_past_search_data_tool],  # Add: local_file_reader_tool, user_communication_tool, data_request_tool
     agent=advik
@@ -435,7 +435,7 @@ Monitoring report including:
 5. Collaboration needs with other team members
 6. Performance trajectory and goal progress
 
-Deliver daily summaries to Ruby for user communication.
+Deliver daily summaries directly to the user
 Provide specialist alerts to relevant team members as needed.
 """,
     #tools=[],  # Add: monitoring_dashboard_tool, alert_system_tool, trend_analysis_tool
@@ -448,7 +448,7 @@ data_quality_management_task = Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby' 
+
 Ensure optimal wearable data quality and device performance for accurate analysis:
 
 DATA QUALITY ASSURANCE:
@@ -508,6 +508,11 @@ diet_plan_generation_task = Task(
     
     Your responsibilities include:
     - Analyze user biomarkers (blood work, CGM trends, microbiome data) and if data is required, either collaborate with `drwarren` or access the data using the `warren_past_search_data_tool`
+
+    collaborate with `Rachel` by understanding injury recovery needs, movement limitations, and muscle function assessments so she can design diet plans that support healing, adjust calorie intake for reduced activity, and provide the right nutrients to improve flexibility, strength, and rehabilitation outcomes.
+
+    collaborate with `Advik` by using his insights on HRV, sleep, energy fluctuations, and training load to fine-tune meal timing, macronutrient balance, and hydration strategies, ensuring the diet plan matches the user’s real lifestyle rhythms and enhances performance, stamina, and recovery.
+
     - Incorporate lifestyle factors, training schedules, and specific health goals and ask user if any data is missing
     - Create initial personalized meal plans with macronutrient breakdowns, and other important nutrition data of the user
     - Monitor user adherence and satisfaction levels
@@ -516,7 +521,7 @@ diet_plan_generation_task = Task(
     - Ensure plans remain practical, sustainable, and aligned with evolving user needs
     - Store the personlised meal plan as {mealplan} and update it whenever their are changes using the `carla_update_record_tool`tool to access and write in the file.
     - to access the original document, use the `carla_past_search_data_tool` tool.
-    - All diet plans (new or revised) must be submitted to `Ruby`(manager) for approval before user delivery.
+    - All diet plans (new or revised) must be forwarded to `Ruby`(manager) from where it will be delivered to the user
     - If you want to access any sort of nutritional data, you can either search on web using the `nutrition_web_data_extractor_tool` or find the relevant research papers using the `research_paper_reader_tool`
 
     You must use tools wisely and only when absolutely necessary. Carefully analyze the query and determine if a tool is truly essential to accomplish the task. If it is, select only the most suitable tool and use it with precision. If it is not required, do NOT use any tools. Avoid unnecessary or excessive tool use—apply them only when they are critical to achieving accurate, efficient, and relevant results.
@@ -531,7 +536,7 @@ diet_plan_generation_task = Task(
     - Supplement protocol if applicable
     - Progress tracking metrics and adjustment triggers
     - Implementation timeline and adherence guidelines
-    - Formatted for `Ruby` review and approval
+    - diet plan sent to `Ruby`(manager) in proper format from where it will be forwarded to user
     """,
     
     tools=[
@@ -546,7 +551,7 @@ nutrition_consultation_task = Task(
     description="""
 
     
-- the query is transferred to you by 'Ruby' 
+- the query is transferred to you by 'Ruby'  and then you have to handle the user's query and chat with him yourself
     Provide expert nutritional guidance and answer user queries within your specialization domain.
     
     Query categories you handle:
@@ -648,7 +653,7 @@ carla_collaboration_integration_task = Task(
 physiotherapy_consultation_task = Task(
     description="""
     
-- the query is transferred to you by 'Ruby' 
+- the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself 
     Provide expert physiotherapy guidance and answer user queries within your specialization domain covering the body's muscular, skeletal, and functional systems.
     
     Query categories you handle:
@@ -717,7 +722,7 @@ exercise_program_generation_task = Task(
     - Update exercise programs every two weeks based on user progress, recovery, and evolving needs
     - Store personalized exercise plan as {exerciseplan} and update using `rachel_update_record_tool`
     - Access original documents using `rachel_past_search_data_tool`
-    - All exercise programs (new or revised) must be submitted to `Ruby` (manager) for approval before user delivery
+    - All exercise programs (new or revised) must be delivered to `Ruby` (manager) and then from there it will be forwarded to the user
     - Research evidence-based exercise protocols using `research_paper_reader_tool` or `movement_web_data_extractor_tool`
 
     You must use tools wisely and only when absolutely necessary. Carefully analyze the query and determine if a tool is truly essential to accomplish the task. If it is, select only the most suitable tool and use it with precision. If it is not required, do NOT use any tools. Avoid unnecessary or excessive tool use—apply them only when they are critical to achieving accurate, efficient, and relevant results.
@@ -735,7 +740,7 @@ exercise_program_generation_task = Task(
     - Implementation timeline with gradual progression guidelines
     - Clear, structured format that is simple to follow and results-focused
     - Aligned with long-term physical resilience and performance goals
-    - Formatted for `Ruby` review and approval
+    - exercise program sent to `Ruby`(manager) in proper format from where it will be forwarded to user
     """,
     
     tools=[
@@ -805,7 +810,7 @@ rachel_collaboration_integration_task = Task(
 customer_success_consultation_task = Task(
     description="""
     
-- the query is transferred to you by 'Ruby' 
+    - the query is transferred to you by 'Ruby' and then you have to handle the user's query and chat with him yourself
     Provide expert customer success guidance and answer user queries within your specialization domain focusing on strategic client relationship management and value optimization.
     
     Query categories you handle:
@@ -959,7 +964,7 @@ neel_collaboration_integration_task = Task(
 client_query_orchestration_task = Task(
     description="""
     
-- the query is transferred to you by 'Ruby' 
+
     Serve as the primary client interface and intelligent query orchestration system for all client requests.
     
     Your primary responsibilities:
@@ -967,7 +972,7 @@ client_query_orchestration_task = Task(
     - Determine the appropriate team member(s) to handle each query based on expertise domains
     - Delegate queries with proper context and clear expectations
     - Track query progress and ensure timely completion
-    - Consolidate responses from multiple specialists into coherent, unified client communications
+   
     - Maintain consistent client experience regardless of backend complexity
     
     DELEGATION DECISION FRAMEWORK:
@@ -996,11 +1001,11 @@ client_query_orchestration_task = Task(
     expected_output="""
     Comprehensive client response including:
     - Direct answer to client's specific query
-    - Coordinated insights from relevant specialists
+    - refer to specific specialist for a query of that specialist's domain
     - Clear next steps and action items
     - Timeline for implementation or follow-up
     - Unified, professional communication hiding operational complexity
-    - Seamless client experience with single point of contact
+    - Seamless client experience 
     - Documentation of delegation and coordination for progress tracking
     """,
     
